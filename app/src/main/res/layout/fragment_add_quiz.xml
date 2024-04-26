@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FrgLogin.LoginFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ABE5BC"
+        android:layout_gravity="center"
+
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="130dp"
+            android:text="QuizThis"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background2"
+        android:backgroundTint="#BAAE96"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="40dp"
+            android:text="Quiz New"
+            android:textSize="30dp" />
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingLeft="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/background"
+            android:layout_marginBottom="18dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_outline" />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Title"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingLeft="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/background"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_outline" />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/edt_des"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Pass"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingLeft="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/background"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_outline" />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/edt_ngaytao"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Pass"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingLeft="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/background"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_outline" />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/edt_nguoitao"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Pass"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:inputType="text" />
+        </LinearLayout>
+
+
+        <Button
+
+            android:id="@+id/btn_newquiz"
+            android:paddingLeft="20dp"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Thêm mới "
+            android:backgroundTint="#CFADE8"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

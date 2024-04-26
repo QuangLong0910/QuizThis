@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/frglogin">
+
+    <fragment
+        android:id="@+id/frglogin"
+        tools:layout="@layout/fragment_login"
+        android:name="quanglong.ph27075.gceagle.FrgLogin.LoginFragment">
+
+        <action
+            android:id="@+id/action_frglogin_to_frgreg"
+            app:destination="@id/frgreg" >
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/frgreg"
+        tools:layout="@layout/fragment_reg"
+        android:name="quanglong.ph27075.gceagle.FrgReg.RegFragment">
+
+        <action
+            android:id="@+id/action_frgreg_to_frglogin"
+            app:destination="@id/frglogin" />
+
+    </fragment>
+
+
+
+
+
+</navigation>
