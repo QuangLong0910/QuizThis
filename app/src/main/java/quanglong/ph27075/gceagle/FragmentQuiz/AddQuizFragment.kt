@@ -15,7 +15,7 @@ import quanglong.ph27075.gceagle.databinding.FragmentAddQuizBinding
 
 class AddQuizFragment : Fragment() {
 
-    private val quizThisModel: QuizThizViewModel by lazy {
+    private val quizThisViewModel: QuizThizViewModel by lazy {
         val application = requireActivity().application
         ViewModelProvider(
             this,
@@ -44,7 +44,7 @@ class AddQuizFragment : Fragment() {
                 binding.edtNgaytao.text.toString(),
                 binding.edtNguoitao.text.toString()
             )
-            quizThisModel.insertBaihoc(quizThis)
+            quizThisViewModel.insertBaihoc(quizThis)
             findNavController().navigate(R.id.action_addquizfragment_to_homefragment)
         }
 

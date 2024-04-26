@@ -59,7 +59,7 @@ class HomeFragment : Fragment() {
 //            adapter.setBaiHoc(it)
 //        })
         lifecycleScope.launch{
-            quizThisModel.getAll().collect{
+            quizThisViewModel.getAll().collect{
                 list ->
                 run {
                     adapter.setBaiHoc(list)
@@ -77,7 +77,7 @@ class HomeFragment : Fragment() {
     private val OnItemDelete: (QuizThis) -> Unit = {
 
     }
-    private val quizThisModel: QuizThizViewModel by lazy {
+    private val quizThisViewModel: QuizThizViewModel by lazy {
         val application = requireActivity().application
         ViewModelProvider(
             this,

@@ -23,7 +23,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
     val isLoggedIn: MutableStateFlow<Boolean> = MutableStateFlow(false)
-    private val accountModel: AccountViewModel by lazy {
+    private val accountViewModel: AccountViewModel by lazy {
         val application = requireActivity().application
         ViewModelProvider(
             this,
@@ -58,7 +58,7 @@ class LoginFragment : Fragment() {
             val userName = this.edtUserName.text
             val password = this.edtPass.text
             binding.btnLogin.setOnClickListener {
-                accountModel.getAccount(
+                accountViewModel.getAccount(
                     userName.toString(),
                     password.toString()
                 ).observe(viewLifecycleOwner) { accounts ->

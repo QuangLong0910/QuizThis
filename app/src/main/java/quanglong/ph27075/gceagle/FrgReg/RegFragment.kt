@@ -23,7 +23,7 @@ import java.util.regex.Pattern
 class RegFragment : Fragment() {
 
     private lateinit var binding: FragmentRegBinding
-    private val accountModel: AccountViewModel by lazy {
+    private val accountViewModel: AccountViewModel by lazy {
         val application = requireActivity().application
         ViewModelProvider(
             this,
@@ -43,7 +43,7 @@ class RegFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnRigistration.setOnClickListener {
-            accountModel.getAll().observe(viewLifecycleOwner) { accounts ->
+            accountViewModel.getAll().observe(viewLifecycleOwner) { accounts ->
                 val isAdmin = accounts.isEmpty()
                 val isActive = true
                 if (checkEmailvaluedate()) {
@@ -74,7 +74,7 @@ class RegFragment : Fragment() {
                             fullname.toString(),
                             time.toString(), isAdmin, isActive
                         )
-                        accountModel.insertAccount(account)
+                        accountViewModel.insertAccount(account)
                         findNavController().navigate(R.id.action_frgreg_to_frglogin)
                     }
                 }
