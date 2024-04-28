@@ -19,7 +19,7 @@ class AddQuizFragment : Fragment() {
         val application = requireActivity().application
         ViewModelProvider(
             this,
-            QuizThizViewModel.BaihocViewmodelFactory(application)
+            QuizThizViewModel.QuizThisViewmodelFactory(application)
         )[QuizThizViewModel::class.java]
 
     }

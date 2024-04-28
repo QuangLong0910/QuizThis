@@ -20,6 +20,8 @@ class QuizThisRepository(app: Application) {
     suspend fun insertsBaiHoc(baiHoc: QuizThis) = quiizThisDAo.insertsBai(baiHoc)
     suspend fun updateBaiHoc(baiHoc: QuizThis) = quiizThisDAo.updateBai(baiHoc)
     suspend fun deleteBaiHoc(baiHoc: QuizThis) = quiizThisDAo.deleteBai(baiHoc)
-    fun getAll(): Flow<List<QuizThis>> = quiizThisDAo.getAllBaiHoc()
+    fun getAll(): Flow<List<QuizThis>> {
+      return  quiizThisDAo.getAllBaiHoc()
+    }
 
 }

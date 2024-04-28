@@ -3,14 +3,14 @@ package quanglong.ph27075.gceagle.Repository
 import android.app.Application
 import androidx.lifecycle.LiveData
 import quanglong.ph27075.gceagle.DAO.AccountDAO
-import quanglong.ph27075.gceagle.Database.AccountDatabase
+import quanglong.ph27075.gceagle.Database.QuizThisDatabase
 import quanglong.ph27075.gceagle.Model.Account
 
 class AccountRepository(app: Application) {
     private val accountDao: AccountDAO
 
     init {
-        var accountDatabase: AccountDatabase = AccountDatabase.getInstance(app)
+        var accountDatabase: QuizThisDatabase = QuizThisDatabase.getInstance(app)
         accountDao = accountDatabase.getAccountDao()
     }
 

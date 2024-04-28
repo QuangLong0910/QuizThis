@@ -22,9 +22,9 @@ interface QuizThizDAO {
     @Delete
     suspend fun deleteBai(quizThis: QuizThis)
 
-    @Query("select*from QuizThiz")
+    @Query("select * from QuizThiz")
     fun getAllBaiHoc(): Flow<List<QuizThis>>
 
     @Query("select*from QuizThiz where Title=:title")
-    fun getBaiHoc(title: String): LiveData<List<QuizThis>>
+    fun getBaiHoc(title: String): Flow<List<QuizThis>>
 }

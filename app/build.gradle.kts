@@ -65,8 +65,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata:$lifecycle_version")
     kapt("androidx.room:room-compiler:$room_version")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1-Beta")
-    dependencies {
+
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
-    }
+
+    implementation ("com.google.code.gson:gson:2.8.5")
 
 }
