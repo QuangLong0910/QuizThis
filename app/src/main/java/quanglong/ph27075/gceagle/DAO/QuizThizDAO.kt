@@ -12,7 +12,7 @@ import quanglong.ph27075.gceagle.Model.QuizThis
 import  kotlinx.coroutines.flow.Flow
 
 @Dao
-interface QuizThizDAO {
+interface QuizThisDAO {
     @Insert
     suspend fun insertsBai(quizThis: QuizThis)
 

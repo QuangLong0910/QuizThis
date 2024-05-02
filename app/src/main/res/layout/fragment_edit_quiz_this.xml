@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ABE5BC"
+    tools:context=".HomeFragment.StorageFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/background3"
+        android:layout_margin="20dp"
+        android:hint="Search"
+
+        android:queryHint="Search" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background5"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:layout_marginLeft="10dp"
+            android:textSize="25sp"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recynewquizpinned"
+
+            />
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="80sp"
+
+             android:background="@drawable/background6"
+             android:layout_margin="10dp"
+             >
+             <ImageView
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_gravity="center"
+             android:layout_marginLeft="10dp"
+             android:text="hello"
+             android:textAlignment="center"
+             android:gravity="center"
+             android:background="@drawable/backgroundtile"
+                 android:id="@+id/newQuizThis"
+             android:src="@drawable/ic_round_close"
+             />
+
+             <TextView
+                 android:layout_marginLeft="20dp"
+                 android:layout_gravity="center"
+                 android:layout_width="wrap_content"
+                 android:text="Add New QuiZ Set"
+                 android:textSize="20dp"
+                 android:layout_height="wrap_content" />
+
+         </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

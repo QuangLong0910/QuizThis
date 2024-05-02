@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import quanglong.ph27075.gceagle.Model.Account
 import quanglong.ph27075.gceagle.Repository.AccountRepository
@@ -24,12 +25,15 @@ class AccountViewModel(application: Application) : ViewModel() {
         accountRepository.deleteAccount(account)
     }
 
-    fun getAll(): LiveData<List<Account>> = accountRepository.getAll()
-    fun getAccount(username: String, password: String): LiveData<Account> {
+    fun getAll(): Flow<List<Account>> {
+        return accountRepository.getAll()
+    }
+
+    fun getAccount(username: String, password: String): Flow<Account> {
         return accountRepository.getAccount(username, password)
     }
 
-    fun getAccountUsername(username: String): LiveData<List<Account>> {
+    fun getAccountUsername(username: String): Flow<List<Account>> {
         return accountRepository.getAccountUsername(username)
     }
 

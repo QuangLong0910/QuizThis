@@ -1,27 +1,28 @@
 package quanglong.ph27075.gceagle.Repository
 
 import android.app.Application
-import androidx.lifecycle.LiveData
+
 import kotlinx.coroutines.flow.Flow
-import quanglong.ph27075.gceagle.DAO.QuizThizDAO
+import quanglong.ph27075.gceagle.DAO.QuizThisDAO
+
 import quanglong.ph27075.gceagle.Database.QuizThisDatabase
 import quanglong.ph27075.gceagle.Model.QuizThis
 
 class QuizThisRepository(app: Application) {
 
 
-    private val quiizThisDAo: QuizThizDAO
+    private val quizThisDAo: QuizThisDAO
 
     init {
-        var quizThisDatabase: QuizThisDatabase = QuizThisDatabase.getInstance(app)
-        quiizThisDAo = quizThisDatabase.getQuizThisDao()
+        val quizThisDatabase: QuizThisDatabase = QuizThisDatabase.getInstance(app)
+        quizThisDAo = quizThisDatabase.getQuizThisDao()
     }
 
-    suspend fun insertsBaiHoc(baiHoc: QuizThis) = quiizThisDAo.insertsBai(baiHoc)
-    suspend fun updateBaiHoc(baiHoc: QuizThis) = quiizThisDAo.updateBai(baiHoc)
-    suspend fun deleteBaiHoc(baiHoc: QuizThis) = quiizThisDAo.deleteBai(baiHoc)
+    suspend fun insertsBaiHoc(baiHoc: QuizThis) = quizThisDAo.insertsBai(baiHoc)
+    suspend fun updateBaiHoc(baiHoc: QuizThis) = quizThisDAo.updateBai(baiHoc)
+    suspend fun deleteBaiHoc(baiHoc: QuizThis) = quizThisDAo.deleteBai(baiHoc)
     fun getAll(): Flow<List<QuizThis>> {
-      return  quiizThisDAo.getAllBaiHoc()
+        return quizThisDAo.getAllBaiHoc()
     }
 
 }

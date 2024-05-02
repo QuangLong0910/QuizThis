@@ -5,22 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#ABE5BC"
-    tools:context=".HomeFragment.HomeFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/them"
-        android:text="Hi"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50dp"
-        android:layout_marginLeft="30dp"
-        android:text="Your Name"/>
+    tools:context=".HomeFragment.StorageFragment">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
@@ -40,16 +25,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quiz Set"
-            android:layout_marginLeft="20dp"
-            android:textSize="40dp"
+            android:text="Pinned Quiz Sets"
+            android:layout_marginLeft="10dp"
+            android:textSize="25sp"
             />
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/recy"
+            android:id="@+id/recyquizpinned"
             />
     </LinearLayout>
-
 
 </LinearLayout>

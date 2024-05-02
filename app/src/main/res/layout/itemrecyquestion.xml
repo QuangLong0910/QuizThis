@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgrounditemquestion"
+    android:layout_margin="10dp"
+    android:id="@+id/itemQuestion"
+    android:layout_height="160dp">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/textviewNameQuizThis"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+      android:layout_margin="20dp"
+        android:text="hello"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/background3"
+
+        android:src="@drawable/group_336"
+        />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/textviewNameQuestion"
+        android:text="Buif Quang long"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/background3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</LinearLayout>

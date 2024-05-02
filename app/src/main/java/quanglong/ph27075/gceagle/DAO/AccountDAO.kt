@@ -6,6 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import kotlinx.coroutines.flow.Flow
 import quanglong.ph27075.gceagle.Model.Account
 
 @Dao
@@ -20,13 +21,13 @@ interface AccountDAO {
     suspend fun deleteAccount(account: Account)
 
     @Query("select*from User")
-    fun getAllAccount(): LiveData<List<Account>>
+    fun getAllAccount(): Flow<List<Account>>
 
     @Query("SELECT * FROM User WHERE Username = :userName AND Password_user = :passWord")
-    fun getAccount(userName: String, passWord: String): LiveData<Account>
+    fun getAccount(userName: String, passWord: String): Flow<Account>
 
     @Query("SELECT * FROM User WHERE Username = :userName ")
-    fun getAccountUsername(userName: String): LiveData<List<Account>>
+    fun getAccountUsername(userName: String): Flow<List<Account>>
 
 
 }

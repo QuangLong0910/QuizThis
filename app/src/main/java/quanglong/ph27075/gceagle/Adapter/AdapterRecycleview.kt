@@ -15,7 +15,7 @@ import quanglong.ph27075.gceagle.R
 
 class AdapterRecycleview(
     private val context: Context,
-    private val onClick: (QuizThis) -> Unit,
+    private val onClick: (QuizThis,Int) -> Unit,
     private val onDelete: (QuizThis) -> Unit
 
 ) : RecyclerView.Adapter<AdapterRecycleview.QuizThisViewHolder>() {
@@ -26,10 +26,13 @@ class AdapterRecycleview(
         private val image: TextView = itemView.findViewById(R.id.imageView)
 
         private val layoutitem: LinearLayout = itemView.findViewById(R.id.layoutitem)
+        private var itemId: Int = -1
+
         fun onBind(quizThis: QuizThis) {
+            itemId = quizThis.id
             tvTen.text = quizThis.title
             image.text = quizThis.description
-            layoutitem.setOnClickListener { onClick(quizThis) }
+            layoutitem.setOnClickListener { onClick(quizThis,itemId) }
 
 
         }
@@ -48,6 +51,9 @@ class AdapterRecycleview(
 
     override fun onBindViewHolder(holder: QuizThisViewHolder, position: Int) {
         holder.onBind(quizThis[position])
+        holder.itemView.setOnClickListener {
+            onClick(quizThis[position], quizThis[position].id )// Truyền ID của mục vào hàm OnItemClick
+        }
     }
 
     fun setData(quizThis: List<QuizThis>) {

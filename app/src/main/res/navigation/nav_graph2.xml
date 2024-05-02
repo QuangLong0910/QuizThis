@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,14 +9,31 @@
         android:name="quanglong.ph27075.gceagle.HomeFragment.HomeFragment"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homefragment_to_addquizfragment"
-            app:destination="@id/addquizfragment" />
+            android:id="@+id/action_homefragment_to_editQuizThisFragment2"
+            app:destination="@id/editQuizThisFragment" />
+        <action
+            android:id="@+id/action_homefragment_to_detailfragment"
+            app:destination="@id/detailfragment"
+
+        >
+            <argument
+                android:name="itemId"
+                app:argType="integer" />
+        </action>
+
     </fragment>
     <fragment
-        android:id="@+id/addquizfragment"
-        android:name="quanglong.ph27075.gceagle.FragmentQuiz.AddQuizFragment" >
+        android:id="@+id/editQuizThisFragment"
+        android:name="quanglong.ph27075.gceagle.HomeFragment.EditQuizThisFragment"
+        tools:layout="@layout/fragment_edit_quiz_this"
+        >
         <action
-            android:id="@+id/action_addquizfragment_to_homefragment"
-            app:destination="@id/homefragment" />
+            android:id="@+id/action_editQuizThisFragment_to_detailfragment"
+            app:destination="@id/detailfragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detailfragment"
+        android:name="quanglong.ph27075.gceagle.HomeFragment.DetailFragment"
+        tools:layout="@layout/fragment_detail" />
+
 </navigation>

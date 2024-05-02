@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/frglogin"
         tools:layout="@layout/fragment_login"
-        android:name="quanglong.ph27075.gceagle.FrgLogin.LoginFragment">
+        android:name="quanglong.ph27075.gceagle.FragmentUser.LoginFragment">
 
         <action
             android:id="@+id/action_frglogin_to_frgreg"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/frgreg"
         tools:layout="@layout/fragment_reg"
-        android:name="quanglong.ph27075.gceagle.FrgReg.RegFragment">
+        android:name="quanglong.ph27075.gceagle.FragmentUser.RegFragment">
 
         <action
             android:id="@+id/action_frgreg_to_frglogin"
